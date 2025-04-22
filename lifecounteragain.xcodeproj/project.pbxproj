@@ -1,0 +1,574 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		59C1971E2DB732CF00832AAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 59C196FF2DB732CD00832AAB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 59C197062DB732CD00832AAB;
+			remoteInfo = lifecounteragain;
+		};
+		59C197282DB732CF00832AAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 59C196FF2DB732CD00832AAB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 59C197062DB732CD00832AAB;
+			remoteInfo = lifecounteragain;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		59C197072DB732CD00832AAB /* lifecounteragain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lifecounteragain.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		59C1971D2DB732CF00832AAB /* lifecounteragainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lifecounteragainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		59C197272DB732CF00832AAB /* lifecounteragainUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lifecounteragainUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		59C1972F2DB732CF00832AAB /* Exceptions for "lifecounteragain" folder in "lifecounteragain" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 59C197062DB732CD00832AAB /* lifecounteragain */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		59C197092DB732CD00832AAB /* lifecounteragain */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				59C1972F2DB732CF00832AAB /* Exceptions for "lifecounteragain" folder in "lifecounteragain" target */,
+			);
+			path = lifecounteragain;
+			sourceTree = "<group>";
+		};
+		59C197202DB732CF00832AAB /* lifecounteragainTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = lifecounteragainTests;
+			sourceTree = "<group>";
+		};
+		59C1972A2DB732CF00832AAB /* lifecounteragainUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = lifecounteragainUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		59C197042DB732CD00832AAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59C1971A2DB732CF00832AAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59C197242DB732CF00832AAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		59C196FE2DB732CD00832AAB = {
+			isa = PBXGroup;
+			children = (
+				59C197092DB732CD00832AAB /* lifecounteragain */,
+				59C197202DB732CF00832AAB /* lifecounteragainTests */,
+				59C1972A2DB732CF00832AAB /* lifecounteragainUITests */,
+				59C197082DB732CD00832AAB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		59C197082DB732CD00832AAB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				59C197072DB732CD00832AAB /* lifecounteragain.app */,
+				59C1971D2DB732CF00832AAB /* lifecounteragainTests.xctest */,
+				59C197272DB732CF00832AAB /* lifecounteragainUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		59C197062DB732CD00832AAB /* lifecounteragain */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59C197302DB732CF00832AAB /* Build configuration list for PBXNativeTarget "lifecounteragain" */;
+			buildPhases = (
+				59C197032DB732CD00832AAB /* Sources */,
+				59C197042DB732CD00832AAB /* Frameworks */,
+				59C197052DB732CD00832AAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				59C197092DB732CD00832AAB /* lifecounteragain */,
+			);
+			name = lifecounteragain;
+			packageProductDependencies = (
+			);
+			productName = lifecounteragain;
+			productReference = 59C197072DB732CD00832AAB /* lifecounteragain.app */;
+			productType = "com.apple.product-type.application";
+		};
+		59C1971C2DB732CF00832AAB /* lifecounteragainTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59C197352DB732CF00832AAB /* Build configuration list for PBXNativeTarget "lifecounteragainTests" */;
+			buildPhases = (
+				59C197192DB732CF00832AAB /* Sources */,
+				59C1971A2DB732CF00832AAB /* Frameworks */,
+				59C1971B2DB732CF00832AAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				59C1971F2DB732CF00832AAB /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				59C197202DB732CF00832AAB /* lifecounteragainTests */,
+			);
+			name = lifecounteragainTests;
+			packageProductDependencies = (
+			);
+			productName = lifecounteragainTests;
+			productReference = 59C1971D2DB732CF00832AAB /* lifecounteragainTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		59C197262DB732CF00832AAB /* lifecounteragainUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59C197382DB732CF00832AAB /* Build configuration list for PBXNativeTarget "lifecounteragainUITests" */;
+			buildPhases = (
+				59C197232DB732CF00832AAB /* Sources */,
+				59C197242DB732CF00832AAB /* Frameworks */,
+				59C197252DB732CF00832AAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				59C197292DB732CF00832AAB /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				59C1972A2DB732CF00832AAB /* lifecounteragainUITests */,
+			);
+			name = lifecounteragainUITests;
+			packageProductDependencies = (
+			);
+			productName = lifecounteragainUITests;
+			productReference = 59C197272DB732CF00832AAB /* lifecounteragainUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		59C196FF2DB732CD00832AAB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1610;
+				LastUpgradeCheck = 1610;
+				TargetAttributes = {
+					59C197062DB732CD00832AAB = {
+						CreatedOnToolsVersion = 16.1;
+					};
+					59C1971C2DB732CF00832AAB = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = 59C197062DB732CD00832AAB;
+					};
+					59C197262DB732CF00832AAB = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = 59C197062DB732CD00832AAB;
+					};
+				};
+			};
+			buildConfigurationList = 59C197022DB732CD00832AAB /* Build configuration list for PBXProject "lifecounteragain" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 59C196FE2DB732CD00832AAB;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 59C197082DB732CD00832AAB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				59C197062DB732CD00832AAB /* lifecounteragain */,
+				59C1971C2DB732CF00832AAB /* lifecounteragainTests */,
+				59C197262DB732CF00832AAB /* lifecounteragainUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		59C197052DB732CD00832AAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59C1971B2DB732CF00832AAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59C197252DB732CF00832AAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		59C197032DB732CD00832AAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59C197192DB732CF00832AAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59C197232DB732CF00832AAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		59C1971F2DB732CF00832AAB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 59C197062DB732CD00832AAB /* lifecounteragain */;
+			targetProxy = 59C1971E2DB732CF00832AAB /* PBXContainerItemProxy */;
+		};
+		59C197292DB732CF00832AAB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 59C197062DB732CD00832AAB /* lifecounteragain */;
+			targetProxy = 59C197282DB732CF00832AAB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		59C197312DB732CF00832AAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G4JC8PG594;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = lifecounteragain/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.uw.ischool.creyes25.lifecounteragain;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		59C197322DB732CF00832AAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G4JC8PG594;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = lifecounteragain/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.uw.ischool.creyes25.lifecounteragain;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		59C197332DB732CF00832AAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		59C197342DB732CF00832AAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		59C197362DB732CF00832AAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G4JC8PG594;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.uw.ischool.creyes25.lifecounteragainTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/lifecounteragain.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/lifecounteragain";
+			};
+			name = Debug;
+		};
+		59C197372DB732CF00832AAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G4JC8PG594;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.uw.ischool.creyes25.lifecounteragainTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/lifecounteragain.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/lifecounteragain";
+			};
+			name = Release;
+		};
+		59C197392DB732CF00832AAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G4JC8PG594;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.uw.ischool.creyes25.lifecounteragainUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = lifecounteragain;
+			};
+			name = Debug;
+		};
+		59C1973A2DB732CF00832AAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G4JC8PG594;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.uw.ischool.creyes25.lifecounteragainUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = lifecounteragain;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		59C197022DB732CD00832AAB /* Build configuration list for PBXProject "lifecounteragain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59C197332DB732CF00832AAB /* Debug */,
+				59C197342DB732CF00832AAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		59C197302DB732CF00832AAB /* Build configuration list for PBXNativeTarget "lifecounteragain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59C197312DB732CF00832AAB /* Debug */,
+				59C197322DB732CF00832AAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		59C197352DB732CF00832AAB /* Build configuration list for PBXNativeTarget "lifecounteragainTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59C197362DB732CF00832AAB /* Debug */,
+				59C197372DB732CF00832AAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		59C197382DB732CF00832AAB /* Build configuration list for PBXNativeTarget "lifecounteragainUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59C197392DB732CF00832AAB /* Debug */,
+				59C1973A2DB732CF00832AAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 59C196FF2DB732CD00832AAB /* Project object */;
+}
