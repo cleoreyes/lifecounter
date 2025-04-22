@@ -1,24 +1,180 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="lifecounteragain" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="115" translatesAutoresizingMaskIntoConstraints="NO" id="NNG-Hs-D5x">
+                                <rect key="frame" x="39.333333333333343" y="89" width="314.33333333333326" height="36"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kq7-dZ-KQ8">
+                                        <rect key="frame" x="0.0" y="0.0" width="105.66666666666667" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Life Points" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bf1-eR-bID">
+                                        <rect key="frame" x="220.66666666666666" y="0.0" width="93.666666666666657" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="w1q-dH-5BW">
+                                <rect key="frame" x="92.333333333333329" y="155" width="208.66666666666669" height="34.333333333333343"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KAB-XK-AON">
+                                        <rect key="frame" x="0.0" y="0.0" width="44.666666666666664" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="+"/>
+                                        <connections>
+                                            <action selector="playerOneButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Or-7u-bdm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efQ-aA-cRa">
+                                        <rect key="frame" x="54.666666666666671" y="0.0" width="44.666666666666671" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="+5"/>
+                                        <connections>
+                                            <action selector="playerOneButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DWC-T1-pqo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U1u-Cy-hlq">
+                                        <rect key="frame" x="109.33333333333333" y="0.0" width="44.666666666666671" height="34.333333333333336"/>
+                                        <color key="tintColor" systemColor="systemPinkColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="-">
+                                            <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="playerOneButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HRb-Dz-i3M"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HaS-XC-LR9">
+                                        <rect key="frame" x="164" y="0.0" width="44.666666666666657" height="34.333333333333336"/>
+                                        <color key="tintColor" systemColor="systemPinkColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="-5">
+                                            <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="playerOneButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jhe-J4-YZC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="115" translatesAutoresizingMaskIntoConstraints="NO" id="29m-6g-9lY">
+                                <rect key="frame" x="37.666666666666657" y="219.33333333333334" width="318" height="36"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAr-4L-A6R">
+                                        <rect key="frame" x="0.0" y="0.0" width="109.33333333333333" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Life Points" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8O-1r-e6w">
+                                        <rect key="frame" x="224.33333333333334" y="0.0" width="93.666666666666657" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game is on!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I4i-gv-Nlb">
+                                <rect key="frame" x="114.66666666666667" y="349.66666666666669" width="163.66666666666663" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NYM-72-jO0">
+                                <rect key="frame" x="92.333333333333329" y="285.33333333333331" width="208.66666666666669" height="34.333333333333314"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A9h-bk-GKD">
+                                        <rect key="frame" x="0.0" y="0.0" width="44.666666666666664" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="+"/>
+                                        <connections>
+                                            <action selector="playerTwoButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="flw-Hy-qX5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4V-OO-q10">
+                                        <rect key="frame" x="54.666666666666671" y="0.0" width="44.666666666666671" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="+5"/>
+                                        <connections>
+                                            <action selector="playerTwoButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bT4-Hf-aLA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTw-pk-1JP">
+                                        <rect key="frame" x="109.33333333333333" y="0.0" width="44.666666666666671" height="34.333333333333336"/>
+                                        <color key="tintColor" systemColor="systemPinkColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="-">
+                                            <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="playerTwoButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QAE-w1-Cbg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Fv-um-lgn">
+                                        <rect key="frame" x="164" y="0.0" width="44.666666666666657" height="34.333333333333336"/>
+                                        <color key="tintColor" systemColor="systemPinkColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="-5">
+                                            <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="playerTwoButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jSR-6t-syY"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="w1q-dH-5BW" firstAttribute="top" secondItem="NNG-Hs-D5x" secondAttribute="bottom" constant="30" id="1Ba-Lh-vYV"/>
+                            <constraint firstItem="I4i-gv-Nlb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6o5-SQ-aVz"/>
+                            <constraint firstItem="29m-6g-9lY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7hf-ib-LSI"/>
+                            <constraint firstItem="29m-6g-9lY" firstAttribute="top" secondItem="w1q-dH-5BW" secondAttribute="bottom" constant="30" id="9Aw-jh-saC"/>
+                            <constraint firstItem="NNG-Hs-D5x" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="J0V-xA-5Jj"/>
+                            <constraint firstItem="NNG-Hs-D5x" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VLE-fw-TDB"/>
+                            <constraint firstItem="I4i-gv-Nlb" firstAttribute="top" secondItem="NYM-72-jO0" secondAttribute="bottom" constant="30" id="W7C-rt-7RL"/>
+                            <constraint firstItem="w1q-dH-5BW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="daw-t0-YB8"/>
+                            <constraint firstItem="NYM-72-jO0" firstAttribute="top" secondItem="29m-6g-9lY" secondAttribute="bottom" constant="30" id="iMW-b8-v10"/>
+                            <constraint firstItem="NYM-72-jO0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wGZ-d3-2S1"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="playerOneLifePoints" destination="Bf1-eR-bID" id="ZhU-Hi-tMG"/>
+                        <outlet property="playerTwoLifePoints" destination="Y8O-1r-e6w" id="xvb-vC-Udx"/>
+                        <outlet property="whoIsLoser" destination="I4i-gv-Nlb" id="Jy4-3R-BpL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-34.507042253521128"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
