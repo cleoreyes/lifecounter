@@ -18,34 +18,54 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         playerOneLifePoints.text = String(playerOneLifeScore)
         playerTwoLifePoints.text = String(playerTwoLifeScore)
-        
     }
 
-
+    @IBOutlet weak var playerOneAnyAmountBtn: UIButton!
+    
+    @IBOutlet weak var player1StepperOutlet: UIStepper!
+    @IBAction func player1Stepper(_ sender: UIStepper) {
+        sender.maximumValue = Double.greatestFiniteMagnitude
+        sender.minimumValue = -Double.greatestFiniteMagnitude
+        let newAmount = Int(sender.value)
+        playerOneAnyAmountBtn.setTitle(String(newAmount), for: .normal)
+    }
+    
+    
+    @IBOutlet weak var playerTwoAnyAmountBtn: UIButton!
+    
+    @IBOutlet weak var player2StepperOutlet: UIStepper!
+    @IBAction func player2Stepper(_ sender: UIStepper) {
+        sender.maximumValue = Double.greatestFiniteMagnitude
+        sender.minimumValue = -Double.greatestFiniteMagnitude
+        let newAmount = Int(sender.value)
+        playerTwoAnyAmountBtn.setTitle(String(newAmount), for: .normal)
+    }
+    
+    
     @IBAction func playerOneButtons(_ sender: UIButton) {
-        let title = (sender.titleLabel!.text!)
+        let title = sender.titleLabel?.text ?? ""
         if (title == "+") {
             playerOneLifeScore += 1
-        } else if (title == "+5") {
-            playerOneLifeScore += 5
         } else if (title == "-") {
             playerOneLifeScore -= 1
-        } else if (title == "-5") {
-            playerOneLifeScore -= 5
+        } else if let customAmount = Int(title) {
+            playerOneLifeScore += customAmount
+            player1StepperOutlet.value = 0
+            playerOneAnyAmountBtn.setTitle(String(0), for: .normal)
         }
         isThereALoser()
     }
     
     @IBAction func playerTwoButtons(_ sender: UIButton) {
-        let title = (sender.titleLabel!.text!)
+        let title = sender.titleLabel?.text ?? ""
         if (title == "+") {
             playerTwoLifeScore += 1
-        } else if (title == "+5") {
-            playerTwoLifeScore += 5
         } else if (title == "-") {
             playerTwoLifeScore -= 1
-        } else if (title == "-5") {
-            playerTwoLifeScore -= 5
+        } else if let customAmount = Int(title) {
+            playerTwoLifeScore += customAmount
+            player2StepperOutlet.value = 0
+            playerTwoAnyAmountBtn.setTitle(String(0), for: .normal)
         }
         isThereALoser()
     }
