@@ -18,17 +18,14 @@ struct Player {
 
 class ViewController: UIViewController {
     
-    // Collection to hold all players
     var players: [Player] = []
     let maxPlayers = 8
     var gameStarted = false
     
-    // Container for player views
     @IBOutlet weak var addPlayerButton: UIButton!
     @IBOutlet weak var whoIsLoser: UILabel!
     var loser = "Game is on!"
     
-    // Keep existing outlets for backward compatibility
     @IBOutlet weak var playerTwoLifePoints: UILabel!
     @IBOutlet weak var playerOneLifePoints: UILabel!
     @IBOutlet weak var playerOneAnyAmountBtn: UIButton!
@@ -39,7 +36,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Initialize with 4 players
         setupInitialPlayers()
     }
     
@@ -53,11 +49,9 @@ class ViewController: UIViewController {
         players.append(player1)
         players.append(player2)
         
-        // Add two more players programmatically
         addPlayer()
         addPlayer()
         
-        // Update all UI
         updateAllPlayerViews()
     }
     
@@ -72,38 +66,30 @@ class ViewController: UIViewController {
             let newPlayer = Player(lifeTotal: 20)
             players.append(newPlayer)
             
-            // Create UI for new player
             createPlayerView(for: players.count - 1)
             
-            // Update player count label if you have one
             updatePlayerCountDisplay()
         }
         
-        // Disable add button if max is reached
         addPlayerButton.isEnabled = players.count < maxPlayers
     }
     
     @IBOutlet weak var playersStackView: UIStackView!
     func createPlayerView(for index: Int) {
-        // Create a container for this player
         let playerView = UIView()
-        playerView.tag = 1000 + index // Tag for identification
+        playerView.tag = 1000 + index
         
-        // Create player label
         let nameLabel = UILabel()
         nameLabel.text = "Player \(index + 1)"
         nameLabel.textAlignment = .center
         
-        // Create life total label
         let lifeLabel = UILabel()
         lifeLabel.text = "20"
         lifeLabel.textAlignment = .center
         lifeLabel.font = UIFont.systemFont(ofSize: 24, weight: .bold)
         
-        // Store the label reference
         players[index].label = lifeLabel
         
-        // Create buttons
         let plusButton = UIButton(type: .system)
         plusButton.setTitle("+", for: .normal)
         plusButton.tag = index
@@ -114,7 +100,6 @@ class ViewController: UIViewController {
         minusButton.tag = index
         minusButton.addTarget(self, action: #selector(playerButtonTapped(_:)), for: .touchUpInside)
         
-        // Create custom amount button and stepper
         let customButton = UIButton(type: .system)
         customButton.setTitle("0", for: .normal)
         customButton.tag = index
@@ -126,25 +111,21 @@ class ViewController: UIViewController {
         stepper.minimumValue = -Double.greatestFiniteMagnitude
         stepper.addTarget(self, action: #selector(stepperValueChanged(_:)), for: .valueChanged)
         
-        // Store references
         players[index].plusButton = plusButton
         players[index].minusButton = minusButton
         players[index].customButton = customButton
         players[index].stepper = stepper
         
-        // Create horizontal stack for buttons
         let buttonStack = UIStackView(arrangedSubviews: [plusButton, minusButton, customButton, stepper])
         buttonStack.axis = .horizontal
         buttonStack.distribution = .fillEqually
         buttonStack.spacing = 8
         
-        // Create vertical stack for the player
         let playerStack = UIStackView(arrangedSubviews: [nameLabel, lifeLabel, buttonStack])
         playerStack.axis = .vertical
         playerStack.spacing = 8
         playerStack.alignment = .center
         
-        // Add to main stack view
         playersStackView.addArrangedSubview(playerStack)
     }
     
@@ -162,7 +143,6 @@ class ViewController: UIViewController {
         } else if let customAmount = Int(title) {
             players[playerIndex].lifeTotal += customAmount
             
-            // Reset stepper and button
             players[playerIndex].stepper?.value = 0
             players[playerIndex].customButton?.setTitle("0", for: .normal)
         }
@@ -178,7 +158,6 @@ class ViewController: UIViewController {
     }
     
     func updateAllPlayerViews() {
-        // Update the first two players using existing UI elements
         if players.count >= 1 {
             playerOneLifePoints.text = String(players[0].lifeTotal)
         }
@@ -187,14 +166,12 @@ class ViewController: UIViewController {
             playerTwoLifePoints.text = String(players[1].lifeTotal)
         }
         
-        // Update all player labels
         for (index, player) in players.enumerated() {
             player.label?.text = String(player.lifeTotal)
         }
     }
     
     func updatePlayerCountDisplay() {
-        // If you have a label showing player count, update it here
     }
     
     func checkForGameOver() {
@@ -215,7 +192,6 @@ class ViewController: UIViewController {
         }
     }
     
-    // Keep existing IBAction methods for backward compatibility
     @IBAction func player1Stepper(_ sender: UIStepper) {
         sender.maximumValue = Double.greatestFiniteMagnitude
         sender.minimumValue = -Double.greatestFiniteMagnitude
