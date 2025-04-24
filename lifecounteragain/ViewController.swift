@@ -16,6 +16,14 @@ struct Player {
     var stepper: UIStepper?
 }
 
+class GameHistory {
+    static var events = [GameEvent]()
+    
+    static func addEvent(_ message: String) {
+        events.append(GameEvent(message: message))
+    }
+}
+
 class ViewController: UIViewController {
     
     var players: [Player] = []
@@ -32,6 +40,38 @@ class ViewController: UIViewController {
     @IBOutlet weak var player1StepperOutlet: UIStepper!
     @IBOutlet weak var playerTwoAnyAmountBtn: UIButton!
     @IBOutlet weak var player2StepperOutlet: UIStepper!
+    @IBOutlet weak var historyButton: UIButton!
+    
+    @objc func playerButtonTapped(_ sender: UIButton) {
+            gameStarted = true
+            addPlayerButton.isEnabled = false
+            
+            let playerIndex = sender.tag
+            let title = sender.titleLabel?.text ?? ""
+            
+            if (title == "+") {
+                players[playerIndex].lifeTotal += 1
+                GameHistory.addEvent("Player \(playerIndex + 1) gained one life.")
+            } else if (title == "-") {
+                players[playerIndex].lifeTotal -= 1
+                GameHistory.addEvent("Player \(playerIndex + 1) lost one life.")
+            } else if let customAmount = Int(title) {
+                players[playerIndex].lifeTotal += customAmount
+                
+                if customAmount != 0 {
+                    let gainOrLost = customAmount > 0 ? "gained" : "lost"
+                    let absAmount = abs(customAmount)
+                    GameHistory.addEvent("Player \(playerIndex + 1) \(gainOrLost) \(absAmount) life.")
+                }
+                
+                players[playerIndex].stepper?.value = 0
+                players[playerIndex].customButton?.setTitle("0", for: .normal)
+            }
+            
+            updateAllPlayerViews()
+            checkForGameOver()
+        }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +80,6 @@ class ViewController: UIViewController {
     }
     
     func setupInitialPlayers() {
-        // Add first two players using existing UI elements
         let player1 = Player(lifeTotal: 20, label: playerOneLifePoints, plusButton: nil, minusButton: nil, 
                             customButton: playerOneAnyAmountBtn, stepper: player1StepperOutlet)
         let player2 = Player(lifeTotal: 20, label: playerTwoLifePoints, plusButton: nil, minusButton: nil, 
@@ -129,28 +168,6 @@ class ViewController: UIViewController {
         playersStackView.addArrangedSubview(playerStack)
     }
     
-    @objc func playerButtonTapped(_ sender: UIButton) {
-        gameStarted = true
-        addPlayerButton.isEnabled = false
-        
-        let playerIndex = sender.tag
-        let title = sender.titleLabel?.text ?? ""
-        
-        if (title == "+") {
-            players[playerIndex].lifeTotal += 1
-        } else if (title == "-") {
-            players[playerIndex].lifeTotal -= 1
-        } else if let customAmount = Int(title) {
-            players[playerIndex].lifeTotal += customAmount
-            
-            players[playerIndex].stepper?.value = 0
-            players[playerIndex].customButton?.setTitle("0", for: .normal)
-        }
-        
-        updateAllPlayerViews()
-        checkForGameOver()
-    }
-    
     @objc func stepperValueChanged(_ sender: UIStepper) {
         let playerIndex = sender.tag
         let newAmount = Int(sender.value)
@@ -175,22 +192,23 @@ class ViewController: UIViewController {
     }
     
     func checkForGameOver() {
-        var isGameOver = false
-        
-        for (index, player) in players.enumerated() {
-            if player.lifeTotal <= 0 {
-                loser = "Player \(index + 1) loses!"
-                isGameOver = true
-                break
+            var isGameOver = false
+            
+            for (index, player) in players.enumerated() {
+                if player.lifeTotal <= 0 {
+                    loser = "Player \(index + 1) loses!"
+                    GameHistory.addEvent("Player \(index + 1) lost the game.")
+                    isGameOver = true
+                    break
+                }
+            }
+            
+            whoIsLoser.text = isGameOver ? loser : "Game is on!"
+            
+            if isGameOver {
+                view.isUserInteractionEnabled = false
             }
         }
-        
-        whoIsLoser.text = isGameOver ? loser : "Game is on!"
-        
-        if isGameOver {
-            view.isUserInteractionEnabled = false
-        }
-    }
     
     @IBAction func player1Stepper(_ sender: UIStepper) {
         sender.maximumValue = Double.greatestFiniteMagnitude
@@ -207,38 +225,61 @@ class ViewController: UIViewController {
     }
     
     @IBAction func playerOneButtons(_ sender: UIButton) {
-        gameStarted = true
-        addPlayerButton.isEnabled = false
-        
-        let title = sender.titleLabel?.text ?? ""
-        if (title == "+") {
-            players[0].lifeTotal += 1
-        } else if (title == "-") {
-            players[0].lifeTotal -= 1
-        } else if let customAmount = Int(title) {
-            players[0].lifeTotal += customAmount
-            player1StepperOutlet.value = 0
-            playerOneAnyAmountBtn.setTitle(String(0), for: .normal)
+            gameStarted = true
+            addPlayerButton.isEnabled = false
+            
+            let title = sender.titleLabel?.text ?? ""
+            if (title == "+") {
+                players[0].lifeTotal += 1
+                GameHistory.addEvent("Player 1 gained one life.")
+            } else if (title == "-") {
+                players[0].lifeTotal -= 1
+                GameHistory.addEvent("Player 1 lost one life.")
+            } else if let customAmount = Int(title) {
+                players[0].lifeTotal += customAmount
+                
+                if customAmount != 0 {
+                    let gainOrLost = customAmount > 0 ? "gained" : "lost"
+                    let absAmount = abs(customAmount)
+                    GameHistory.addEvent("Player 1 \(gainOrLost) \(absAmount) life.")
+                }
+                
+                player1StepperOutlet.value = 0
+                playerOneAnyAmountBtn.setTitle(String(0), for: .normal)
+            }
+            updateAllPlayerViews()
+            checkForGameOver()
         }
-        updateAllPlayerViews()
-        checkForGameOver()
-    }
+    
     
     @IBAction func playerTwoButtons(_ sender: UIButton) {
-        gameStarted = true
-        addPlayerButton.isEnabled = false
-        
-        let title = sender.titleLabel?.text ?? ""
-        if (title == "+") {
-            players[1].lifeTotal += 1
-        } else if (title == "-") {
-            players[1].lifeTotal -= 1
-        } else if let customAmount = Int(title) {
-            players[1].lifeTotal += customAmount
-            player2StepperOutlet.value = 0
-            playerTwoAnyAmountBtn.setTitle(String(0), for: .normal)
+            gameStarted = true
+            addPlayerButton.isEnabled = false
+            
+            let title = sender.titleLabel?.text ?? ""
+            if (title == "+") {
+                players[1].lifeTotal += 1
+                GameHistory.addEvent("Player 2 gained one life.")
+            } else if (title == "-") {
+                players[1].lifeTotal -= 1
+                GameHistory.addEvent("Player 2 lost one life.")
+            } else if let customAmount = Int(title) {
+                players[1].lifeTotal += customAmount
+                
+                if customAmount != 0 {
+                    let gainOrLost = customAmount > 0 ? "gained" : "lost"
+                    let absAmount = abs(customAmount)
+                    GameHistory.addEvent("Player 2 \(gainOrLost) \(absAmount) life.")
+                }
+                
+                player2StepperOutlet.value = 0
+                playerTwoAnyAmountBtn.setTitle(String(0), for: .normal)
+            }
+            updateAllPlayerViews()
+            checkForGameOver()
         }
-        updateAllPlayerViews()
-        checkForGameOver()
-    }
+    
+    @IBAction func showHistoryTapped(_ sender: UIButton) {
+            performSegue(withIdentifier: "showHistory", sender: self)
+        }
 }
